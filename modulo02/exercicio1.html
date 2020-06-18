@@ -1,0 +1,32 @@
+﻿<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Curso Javascript</title>        
+    </head>
+    <body>
+        <button class='botao' id='btnCriar' onclick="gerarQuadrado()">Gerar outro</button>
+        <div id="app">
+            <div class="box"></div>
+        </div>
+        <script>
+            var btnCriar = document.querySelector('#btnCriar')
+                btnCriar.style.color = '#fff'
+                btnCriar.style.fontWeight = 'bold';
+                btnCriar.style.backgroundColor = '#f00';
+                btnCriar.style.border = 'solid #ddd';
+                btnCriar.style.width = '100';
+                btnCriar.style.height = '40';
+                btnCriar.style.marginLeft = '45%';
+
+                function gerarQuadrado() {
+                    let boxElement = document.createElement("div");
+                    boxElement.style.width = '100';
+                    boxElement.style.height = '100';
+                    boxElement.style.margin = '10';
+                    boxElement.style.backgroundColor = '#f00';
+                    boxElement.classList.add('box');
+                    document.body.appendChild(boxElement);
+                }    
+        </script>
+    </body>
+</html>

@@ -1,0 +1,34 @@
+﻿<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Curso Javascript</title>        
+    </head>
+    <body>
+        <div class="container">
+        <div id="app">
+            <button type="button" class="btn btn-success">Success</button>
+            <div class="box" id="box" onmouseover="getRandomColor()"></div>
+        </div>
+    </div>
+        <script>
+            var btnElement = document.querySelector('button.btn');
+            var boxElement = document.querySelector('.box');
+
+                btnElement.onclick = function () {
+                    boxElement.style.width = '100';
+                    boxElement.style.height = '100';
+                    boxElement.style.marginTop = '50';
+                    boxElement.style.backgroundColor = '#f00';
+                    
+                }
+                function getRandomColor() {
+                    var letters = "0123456789ABCDEF";
+                    var color = "#";
+                    for (var i = 0; i < 6; i++) {
+                        color +=letters[Math.floor(Math.random() * 16)];
+                    }
+                    boxElement.style.backgroundColor = color;
+            }                   
+        </script>
+    </body>
+</html>
